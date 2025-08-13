@@ -3,20 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HTML Kod Paylaşma</title>
+  <title>HitGub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <button id="Ekle">+ Kod Ekle</button>
-  
-  <br>
-  <input type="text" id="konuInput" placeholder="Programın başlığını girin">
-  <br/>
-  <textarea id="textarea" placeholder="Kodunuzu buraya yazınız..."></textarea>
-  <br>
-  <button id="Kaydet" style="display:none;">💾 Kaydet</button>
+  <div class="header">
+    <h1>HitGub</h1>
+    <div class="user-info">
+      <span id="usernameDisplay"></span>
+      <button id="logoutBtn" class="logout-btn">Çıkış Yap</button>
+    </div>
+  </div>
 
-  <div id="codeList"></div>
+  <div id="loginMessage" class="login-message" style="display: none;">
+    <h2>Kod paylaşım platformuna hoş geldiniz!</h2>
+    <p>Kod paylaşmak ve diğer kullanıcıların kodlarını görmek için giriş yapın.</p>
+    <a href="/login" class="login-link">Giriş Yap</a>
+  </div>
+
+  <div id="mainContent" style="display: none;">
+    <button id="Ekle">+ Kod Ekle</button>
+    
+    <br>
+    <input type="text" id="konuInput" placeholder="Programın başlığını girin">
+    <br/>
+    <textarea id="textarea" placeholder="Kodunuzu buraya yazınız..."></textarea>
+    <br>
+    <button id="Kaydet" style="display:none;">💾 Kaydet</button>
+
+    <div id="codeList"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
